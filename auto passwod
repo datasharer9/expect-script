@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+
+spawn ssh -p40020 'ip address'
+
+expect "*password:"
+send "12347r"
+
+expect "*>"
+send "ls -l\r"
+
+interact
